@@ -1,0 +1,271 @@
+html{
+    box-sizing:border-box
+}
+*,*:before,*:after{
+    box-sizing:inherit
+}
+
+ html,body{
+    font-family:Verdana,sans-serif;
+    font-size:15px;
+    line-height:1.5
+}
+html{
+    overflow-x:hidden
+}
+
+h3{
+    font-size:24px
+}
+h4{
+    font-size:20px
+}
+h5{
+    font-size:18px
+}
+h6{
+    font-size:16px
+}
+ .tags-font-style{
+    font-family:serif
+}
+
+ h1,h2,h3,h4,h5,h6{
+    font-family:"Segoe UI",Arial,sans-serif;
+    font-weight:400;
+    margin:10px 0
+}
+.sidebar-index{
+    z-index:2 !important;
+    width:40% !important;
+    min-width:300px !important
+}
+
+.card-image{
+    max-width:100%;
+    height:auto
+}
+img{
+    vertical-align:middle
+}
+
+ .blog-hover tbody tr:hover,.blog-ul.blog-hover li:hover{
+    background-color:#ccc
+}
+
+ .sm-btn{
+    border:none;
+    display:inline-block;
+    padding:8px 16px;
+    vertical-align:middle;
+    overflow:hidden;
+    text-decoration:none;
+    color:inherit;
+    background-color:inherit;
+    text-align:center;
+    cursor:pointer;
+    white-space:nowrap
+}
+
+.tags{
+    background-color:#000;
+    color:#fff;
+    display:inline-block;
+    padding-left:8px;
+    padding-right:8px;
+    text-align:center
+}
+
+ .blog-ul{
+    list-style-type:none;
+    padding:0;
+    margin:0
+}
+.blog-ul li{
+    padding:8px 16px;
+    border-bottom:1px solid #ddd
+}
+.blog-ul li:last-child{
+    border-bottom:none
+}
+
+.sidebar{
+    height:100%;
+    width:200px;
+    background-color:#fff;
+    position:fixed!important;
+    z-index:1;
+    overflow:auto
+}
+
+.page-content,#main{
+    transition:margin-left .4s
+}
+
+.bar-items{
+    width:100%;
+    overflow:hidden
+}
+.center .bar-items{
+    display:inline-block;
+    width:auto
+}
+
+ .sidebar-bar-block .options{
+    width:100%;
+    display:block;
+    padding:8px 16px;
+    text-align:left;
+    border:none;
+    white-space:normal;
+    float:none;
+    outline:0
+}
+ .sidebar-bar-block.center .options{
+    text-align:center
+}
+
+.about-container:after,.about-container:before,.row-padding:after,.row-padding:before,.bar-items:before,.bar-items:after{
+    content:"";
+    display:table;
+    clear:both
+}
+.container-width,.item-box{
+    float:left;
+    width:100%
+}
+
+ @media (min-width:601px){
+    .item-box{
+        width:24.99999%
+    }
+    .container-width{
+        width:33.33333%
+    }
+}
+
+.content{
+    margin-left:auto;
+    margin-right:auto
+}
+.content{
+    max-width:980px
+}
+
+ @media (max-width:600px){
+    
+}
+ @media (max-width:768px){
+    
+}
+ @media (min-width:993px){
+    
+}
+ @media (max-width:992px) and (min-width:601px){
+    
+}
+ @media (max-width:992px){
+    .page-content{
+        margin-left:0!important;
+        margin-right:0!important
+    }
+}
+.head{
+    position:fixed;
+    width:100%;
+    z-index:1
+}
+.head{
+    top:0
+}
+ 
+.row-padding,.row-padding>.container-width,.row-padding>.item-box{
+    padding:0 8px
+}
+.about-container{
+    padding:0.01em 16px
+}
+
+.option-card{
+    box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)
+}
+
+.sidebar-left{
+    position:relative;
+    animation:animateleft 0.4s
+}
+
+@keyframes animateleft{
+    from{
+        left:-300px;
+        opacity:0
+    }
+     to{
+        left:0;
+        opacity:1
+    }
+}
+
+.small-tags{
+    font-size:12px!important
+}
+
+.large-font{
+    font-size:18px!important
+}
+
+.larger-fonts{
+    font-size:24px!important
+}
+
+.center{
+    text-align:center!important
+}
+
+.bottom-margin{
+    margin-bottom:16px!important
+}
+
+.right-margin{
+    margin-right:16px!important
+}
+
+.padding-top-right{
+    padding:8px 16px!important
+}
+
+.padding-smaller{
+    padding-top:16px!important;
+    padding-bottom:16px!important
+}
+
+.padding-large{
+    padding-top:32px!important;
+    padding-bottom:32px!important
+}
+
+.float-left{
+    float:left!important
+}
+.float-right{
+    float:right!important
+}
+.sm-btn:hover{
+    color:#000!important;
+    background-color:#ccc!important
+} 
+
+.background-white{
+    color:#000!important;
+    background-color:#fff!important
+}
+.background-black,.background-hover-black:hover{
+    color:#fff!important;
+    background-color:#000!important
+}
+
+.background-dark-grey{
+    color:#fff!important;
+    background-color:#616161!important
+}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     

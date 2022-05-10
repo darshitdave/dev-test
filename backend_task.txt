@@ -1,0 +1,89 @@
+Create database tables like.
+
+I think a dynamic table design is not the good practices. Just create customer table. In customer table the primary_key is id.
+
+
+CREATE TABLE CUSTOMERS(
+    ID INT NOT NULL,
+    first_name VARCHAR (20) NOT NULL,
+    last_name VARCHAR (20) NOT NULL,
+    phone varchar(50)  NOT NULL,
+    updated_at TIMESTAMP NOT NULL DEFAULT NOW() ON UPDATE NOW(),
+    created_at TIMESTAMP NOT NULL,
+    PRIMARY KEY (ID)
+);
+
+Now create vehicle detail table where customer_id is related to customers.id so this means the customer has the field_name like make, model, year. Now in future if we want to add new fields so we can store field_name and values in the table.
+
+CREATE TABLE VEHICLE_DETAIL (
+    vehicle_id int NOT NULL,
+    field_name varchar(100) NOT NULL,
+    values varchar(100) NOT NULL,
+    customer_id int,
+    updated_at TIMESTAMP NOT NULL DEFAULT NOW() ON UPDATE NOW(),
+    created_at TIMESTAMP NOT NULL,
+    PRIMARY KEY (vehicle_id),
+    FOREIGN KEY (customer_id) REFERENCES CUSTOMERS(ID)
+);
+=====================================
+
+First page
+==========
+
+Show customer details class
+---------------------------
+
+public function customerDetail(){
+
+    $getCustomerDetail = CustomerDetail::orderBy('created_at','DESC')->get();
+
+    return view('customer_detail',compact('getCustomerDetail'));
+}
+//send data to the template and show the customer detail
+--------------------------------------------------------
+
+
+Submitting the data of customers
+----------------------------------
+
+public function saveCustomerDetail(Request $request){
+
+    $saveCustomerDetail = new CustomerDetail;
+    $saveCustomerDetail->first_name = $request->first_name;
+    $saveCustomerDetail->last_name = $request->last_name;
+    $saveCustomerDetail->phone = $request->phone;
+    $saveCustomerDetail->save();
+
+    return redirect (route('customerDetails'));
+}
+
+Second Page
+===========
+
+Show customer vehicle details
+-----------------------------
+
+public function getCustomerVehicleDetails($id){
+
+    $getVehicleDetails = VehicleDetail::where('customer_id',"=",$id)->get();
+
+    return view('vehicle_detail',compact('getVehicleDetails'));
+}
+//send data to the template and show the filed name and values.
+
+---------------------------------------------------------------------
+
+Save customer vehicle details
+-----------------------------
+add dynamic by key and values like model => 2011.
+===================================================
+
+public function saveCustomerVehicleDetail(Request $redirect){
+
+    $saveCustomerVehicleDetail = VehicleDetail::create(array_merge($request->all(), ['index' => 'value'] ));
+    $saveCustomerVehicleDetail->save();
+
+    return redirect (route('customerVehicleDetails'));
+}
+
+

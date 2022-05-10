@@ -1,6 +1,6 @@
 Create database tables like.
 
-I think a dynamic table design is not the good practices. Just create customer table. In customer table the primary_key is id.
+Just create customer table. In customer table the primary_key is id.
 
 
 CREATE TABLE CUSTOMERS(
@@ -13,7 +13,7 @@ CREATE TABLE CUSTOMERS(
     PRIMARY KEY (ID)
 );
 
-Now create vehicle detail table where customer_id is related to customers.id so this means the customer has the field_name like make, model, year. Now in future if we want to add new fields so we can store field_name and values in the table.
+Now create vehicle detail table where customer_id is related to customers.id . This means the customer has the field_name like make, model, year from the Vehicle_Detail table. Thus, if we want to add new fields in future, we can store it as field_name and values in the table.
 
 CREATE TABLE VEHICLE_DETAIL (
     vehicle_id int NOT NULL,
